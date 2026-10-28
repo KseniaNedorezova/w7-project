@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пульс программы — вовлечённость в онлайн-тренировки</title>
+<link rel="stylesheet" href="fitness.css?v=5">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-header">
+    <div class="eyebrow">Онлайн-тренировки · 10 недель · 101 пользователь · 80 тренировок</div>
+    <h1 class="page-title">Пульс программы: вовлечённость тает к середине — удерживают её короткие форматы</h1>
+  </div>
+
+  <!-- Фактоиды (пересчитываются под активный фильтр) -->
+  <div class="kpi-row" id="kpi"></div>
+
+  <!-- Панель активного фильтра -->
+  <div class="filter-bar" id="filter-bar">
+    <span class="filter-hint">Кликните тип тренировки или тренера, чтобы отфильтровать все графики и фактоиды.</span>
+    <span class="filter-active" id="filter-active" hidden></span>
+    <button class="filter-reset" id="filter-reset" hidden>Сбросить фильтр ✕</button>
+  </div>
+
+  <div class="dash">
+
+    <!-- ГЛАВНЫЙ ГРАФИК -->
+    <section class="card card-main">
+      <div class="card-head">
+        <h2><span class="sec-num">1</span> Пульс программы: просмотры по неделям и типам</h2>
+      </div>
+      <div class="legend-row" id="legend-type"></div>
+      <div class="chart-wrap"><svg id="chart-main"></svg></div>
+    </section>
+
+    <!-- ТРЕНЕРЫ -->
+    <section class="card">
+      <div class="card-head">
+        <h2><span class="sec-num">2</span> Тренеры и оценки по типам</h2>
+      </div>
+      <div class="chart-wrap"><svg id="chart-trainers"></svg></div>
+      <div class="rating-scale" id="rating-scale"></div>
+    </section>
+
+    <!-- КАЧЕСТВО / ПЕРЕЗАПИСЬ -->
+    <section class="card">
+      <div class="card-head">
+        <h2><span class="sec-num">3</span> Кандидаты на перезапись: досмотр и оценка</h2>
+      </div>
+      <div class="chart-wrap"><svg id="chart-quality"></svg></div>
+    </section>
+
+    <!-- СЕГМЕНТЫ ВОВЛЕЧЁННОСТИ -->
+    <section class="card">
+      <div class="card-head">
+        <h2><span class="sec-num">4</span> Что смотрят пользователи с разной вовлечённостью</h2>
+      </div>
+      <div class="chart-wrap"><svg id="chart-segments"></svg></div>
+    </section>
+
+  </div>
+
+</div>
+
+<script src="fitness.js?v=5"></script>
+</body>
+</html>
